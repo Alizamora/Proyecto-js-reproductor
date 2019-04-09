@@ -1,13 +1,44 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Proyecto de Js</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Music</h1>
+      <div class="container-reproductor">
+        <div class="img-album"></div>
+        <div class="reproductor">
+          <button class="btn" id="random"></button>
+          <button class="btn" id="before"></button>
+          <button class="btn" id="play"></button>
+          <button class="btn" id="next"></button>
+          <button class="btn" id="repeat"></button>
+        </div>
+      </div>
+      <div class="playlist">
+        <button class="songs">Songs</button>
+        <button class="import">Import</button>
+        <div class="songs-list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="songs-playlist">
+          <button class="btn" class="delete">Delete</button>
+          <button class="btn" class="edit">Edit</button>
+        </div>
+      </div>
 
+      <div class="modal"></div>
+    </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

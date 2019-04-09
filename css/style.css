@@ -1,3 +1,118 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
 
+.container {
+  width: 100%;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  padding: 30px;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+.btn {
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  height: 20px;
+  justify-self: center;
+  margin: 15px 0;
+  width: 20px;
+}
+
+.container-reproductor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.img-album {
+  background-image: url(../img/albums/NinaSimon-FeelingGood.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  grid-column: 3/5;
+  width: 100%;
+}
+
+.reproductor {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  display: grid;
+  grid-column: 2/6;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 50px;
+  margin: 20px;
+  width: 100%;
+}
+
+#random {
+  background-image: url(../img/icons/icons-black/radom.png);
+}
+
+#play {
+  background-image: url(../img/icons/icons-black/play.png);
+}
+
+#pause {
+  background-image: url(../img/icons/icons-black/pause.png);
+}
+
+#next {
+  background-image: url(../img/icons/icons-black/next.png);
+}
+
+#before {
+  background-image: url(../img/icons/icons-black/before.png);
+}
+
+#repeat {
+  background-image: url(../img/icons/icons-black/repeat.png);
+}
+
+.songs {
+  grid-column: 3/4;
+}
+
+.import {
+  grid-column: 4/5;
+}
+
+.playlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+  width: 100%;
+}
+
+.songs-list {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: black;
+  border-radius: 10px;
+  padding-bottom: 300px;
+  justify-self: center;
+  margin: 20px;
+  width: 98%;
+  grid-column: 1/4;
+}
+
+.songs-playlist {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: black;
+  border-radius: 10px;
+  padding-bottom: 300px;
+  justify-self: center;
+  margin: 20px;
+  width: 98%;
+  grid-column: 4/7;
+}
 
 /*# sourceMappingURL=style.css.map */

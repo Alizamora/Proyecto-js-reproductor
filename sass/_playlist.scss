@@ -1,0 +1,24 @@
+.songs {
+  grid-column: 3/4;
+}
+
+.import {
+  grid-column: 4/5;
+}
+
+.playlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+  width: 100%;
+}
+
+.songs-list {
+  @include dragAndDrog;
+  grid-column: 1/4;
+}
+
+.songs-playlist {
+  @include dragAndDrog;
+  grid-column: 4/7;
+}
