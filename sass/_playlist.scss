@@ -1,24 +1,45 @@
-.songs {
-  grid-column: 3/4;
+.delete{
+	background-image: url(../img/icons/icons-black/trash.png);
+	grid-column: 3/4;
+}
+.edit{
+	background-image: url(../img/icons/icons-black/edit.png);
+	grid-column: 2/3;
 }
 
-.import {
-  grid-column: 4/5;
+.tab-songs {
+  grid-column: 1/2;
+}
+
+.tabs{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column: 4/6;
+}
+
+.tab-import {
+  grid-column: 2/3;
 }
 
 .playlist {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  position: relative;
-  width: 100%;
+  grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 1fr 5%;
+	margin-top: 20px; 
+	width: 100%;
+}
+.search{
+	background-image: url(../img/icons/icons-black/search.png);
 }
 
-.songs-list {
-  @include dragAndDrog;
-  grid-column: 1/4;
+#songs-list {
+	@include dragAndDrog;
+  grid-column: 2/5;
 }
 
-.songs-playlist {
-  @include dragAndDrog;
-  grid-column: 4/7;
+#songs-playlist {
+	@include dragAndDrog;
+	display: grid;
+	grid-template-columns: 1fr 10% 10%;
+	grid-template-rows: 1fr 20%;
+  grid-column: 5/8;
 }

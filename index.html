@@ -20,20 +20,26 @@
         </div>
       </div>
       <div class="playlist">
-        <button class="songs">Songs</button>
-        <button class="import">Import</button>
-        <div class="songs-list">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <div class="tabs">
+          <button class="tab-btn" onclick="open(event,'songs-list')">Songs</button>
+          <button class="tab-btn">Import</button>
         </div>
-        <div class="songs-playlist">
-          <button class="btn" class="delete">Delete</button>
-          <button class="btn" class="edit">Edit</button>
+        
+        <div id="songs-list" class="js-tab-content"> 
+          <select name="" id="">
+            <option value="artist">Artist</option>
+            <option value="songName">Song Name</option>
+            <option value="Album">Album</option>
+            <option value="Started">Started</option>
+          </select>
+          <button class="btn search"></button>
+          <input type="search" id="js-search" name="q">
+          <ul id="js-list"></ul>
+        </div>
+
+        <div id="songs-playlist" class="js-tab-content">
+          <button class="btn edit"></button>
+          <button class="btn delete"></button>
         </div>
       </div>
 
