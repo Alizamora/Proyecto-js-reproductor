@@ -1,6 +1,7 @@
 // Styles 
 @import 'helpers/mixins';
 @import 'general';
-@import 'reproductor';
-@import 'playlist';
-@import 'modal';
+@import 'page/reproductor';
+@import 'components/tabs';
+@import 'components/form';
+@import 'components/modal';

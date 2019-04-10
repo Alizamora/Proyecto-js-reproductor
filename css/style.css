@@ -16,6 +16,9 @@ h1 {
 
 ul {
   margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
 }
 
 .btn {
@@ -78,6 +81,10 @@ ul {
   background-image: url(../img/icons/icons-black/repeat.png);
 }
 
+.active {
+  z-index: 20;
+}
+
 .delete {
   background-image: url(../img/icons/icons-black/trash.png);
   grid-column: 3/4;
@@ -88,32 +95,50 @@ ul {
   grid-column: 2/3;
 }
 
-.tab-songs {
-  grid-column: 1/2;
-}
-
-.tabs {
+.panels {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column: 4/6;
+  grid-template-columns: 1fr;
+  grid-row: 2;
+  grid-column: 2/8;
+  position: relative;
+  z-index: 10;
 }
 
-.tab-import {
-  grid-column: 2/3;
+.panel {
+  left: -2000px;
+  position: absolute;
+}
+.panel.active {
+  position: relative;
+  left: 0;
 }
 
-.playlist {
-  display: grid;
-  grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 1fr 5%;
-  margin-top: 20px;
-  width: 100%;
+.options {
+  grid-column: 1;
+  margin: 10px;
+}
+
+.search-icon {
+  background-image: url(../img/icons/icons-black/search.png);
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: right;
+  margin: 10px;
 }
 
 .search {
-  background-image: url(../img/icons/icons-black/search.png);
+  grid-column: 3;
+  grid-row: 1;
+  width: 75%;
+  margin: 10px;
 }
 
-#songs-list {
+.songs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.songs-list {
   background-color: rgba(255, 255, 255, 0.5);
   border-color: black;
   border-radius: 10px;
@@ -121,10 +146,13 @@ ul {
   justify-self: center;
   margin: 20px;
   width: 98%;
-  grid-column: 2/5;
+  display: grid;
+  grid-template-columns: 35%;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 1;
 }
 
-#songs-playlist {
+.songs-playlist {
   background-color: rgba(255, 255, 255, 0.5);
   border-color: black;
   border-radius: 10px;
@@ -135,7 +163,44 @@ ul {
   display: grid;
   grid-template-columns: 1fr 10% 10%;
   grid-template-rows: 1fr 20%;
-  grid-column: 5/8;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 3/7;
+  justify-items: center;
+}
+
+.tab {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  width: 90%;
+  cursor: pointer;
+}
+.tab:active {
+  background-color: #eee;
+}
+
+.tabs-container {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 1fr 5%;
+  grid-template-rows: 10% 1fr;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: black;
+  border-radius: 10px;
+  padding-bottom: 300px;
+  justify-self: center;
+  margin: 20px;
+  width: 98%;
 }
 
 /*# sourceMappingURL=style.css.map */

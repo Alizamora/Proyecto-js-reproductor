@@ -1,0 +1,101 @@
+.active {
+  z-index: 20;
+}
+
+.delete {
+  background-image: url(../img/icons/icons-black/trash.png);
+  grid-column: 3/4;
+}
+
+.edit {
+  background-image: url(../img/icons/icons-black/edit.png);
+  grid-column: 2/3;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 2;
+  grid-column: 2/8;
+  position: relative;
+  z-index: 10;
+}
+
+.panel {
+  left: -2000px;
+  position: absolute;
+
+  &.active {
+    position: relative;
+    left: 0;
+  }
+}
+
+.options {
+  grid-column: 1;
+  margin: 10px;
+}
+
+.search-icon {
+  background-image: url(../img/icons/icons-black/search.png);
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: right;
+  margin: 10px;
+}
+
+.search {
+  grid-column: 3;
+  grid-row: 1;
+  width: 75%;
+  margin: 10px;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.songs-list {
+  @include dragAndDrog;
+  display: grid;
+  grid-template-columns: 35%;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 1;
+}
+
+.songs-playlist {
+  @include dragAndDrog;
+  display: grid;
+  grid-template-columns: 1fr 10% 10%;
+  grid-template-rows: 1fr 20%;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 3/7;
+  justify-items: center;
+}
+
+.tab {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  width: 90%;
+  cursor: pointer;
+
+  &:active {
+    background-color: #eee;
+  }
+}
+
+.tabs-container {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 1fr 5%;
+  grid-template-rows: 10% 1fr;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}

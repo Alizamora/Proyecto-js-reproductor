@@ -19,32 +19,49 @@
           <button class="btn" id="repeat"></button>
         </div>
       </div>
-      <div class="playlist">
-        <div class="tabs">
-          <button class="tab-btn" onclick="open(event,'songs-list')">Songs</button>
-          <button class="tab-btn">Import</button>
-        </div>
-        
-        <div id="songs-list" class="js-tab-content"> 
-          <select name="" id="">
-            <option value="artist">Artist</option>
-            <option value="songName">Song Name</option>
-            <option value="Album">Album</option>
-            <option value="Started">Started</option>
-          </select>
-          <button class="btn search"></button>
-          <input type="search" id="js-search" name="q">
-          <ul id="js-list"></ul>
-        </div>
 
-        <div id="songs-playlist" class="js-tab-content">
-          <button class="btn edit"></button>
-          <button class="btn delete"></button>
+      <!--Tabs-->
+      <div class="tabs-container">
+        <ul class="tabs" id="tabs">
+          <li class="tab active">Songs</li>
+          <li class="tab">Import</li>
+        </ul>
+
+
+        <!--Panels-->
+        <div class="panels">
+          <!--Panel 1-->
+          <div class="panel songs active">
+            <div class="songs-list">
+              <select name="select" id="" class="options">
+                <option value="artist">Artist</option>
+                <option value="songName">Song Name</option>
+                <option value="Album">Album</option>
+                <option value="Started">Started</option>
+              </select>
+              <input type="search" id="js-search" name="q" class="search"/>
+              <button class="btn search-icon"></button>
+              <ul id="js-list"></ul>
+            </div>
+
+            <div class="songs-playlist">
+              <button class="btn edit"></button>
+              <button class="btn delete"></button>
+            </div>
+          </div>
+
+          <!--Panel 2-->
+          <div class="panel">
+            <form action="" class="form">
+
+            </form>
+          </div>
         </div>
       </div>
 
       <div class="modal"></div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>
