@@ -3,15 +3,35 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	border: none;
-	height: 20px;
+	height: 15px;
 	justify-self: center;
-	margin: 15px 0;
-	width: 20px;
+	margin: 5px 0;
+	width: 15px;
 }
 
 .container-reproductor {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 40%;
+}
+
+.controls{
+	grid-column: 1/6;
+	grid-row: 4;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.current-time{
+	grid-column: 1;
+	justify-self: left;
+	margin-left: 35px;
+}
+
+.duration{
+	grid-column: 2;
+	justify-self: right;
+	margin-right: 35px;
 }
 
 .img-album {
@@ -20,6 +40,7 @@
 	background-size: cover;
 	height: 250px;
 	grid-column: 3 / 5;
+	grid-row: 1;
 	width: 100%;
 }
 
@@ -29,16 +50,72 @@
 	border-radius: 5px;
 	display: grid;
 	grid-column: 2 / 6;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	height: 50px;
-	margin: 20px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 20% 20% 20% 24% 29%;
+	padding-bottom: 10px;
+	margin: 5px;
 	width: 100%;
 }
+
+.song-slider{
+	justify-self: center;
+	width: 90%;
+	grid-column: 1/6;
+	grid-row: 2;
+}
+
+.song-title{
+	color: white;
+	font-size: 11px;
+	text-overflow: ellipsis;
+	//overflow: hidden;
+	grid-row: 1;
+	grid-column: 1/6;
+	text-align: right;
+	margin-right: 35px;
+	white-space: nowrap;
+}
+
+.time{
+	grid-column: 1/6;
+	grid-row: 3;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	font-size: 12px;
+}
+
+.next-song{
+	color: white;
+	margin-left: 35px;
+	font-size: 11px;
+	grid-column: 1/4;
+}
+
+.volume{
+	width: 60%;
+	justify-self: center;
+}
+
+.volume-controls{
+	margin: 8 35px 12 0;
+	justify-self: right;
+	grid-column: 4/6;
+}
+
+
 
 //Controles del reproductor
 
 #random{
 	background-image: url(../img/icons/icons-black/radom.png);
+}
+
+#before{
+	background-image: url(../img/icons/icons-black/before.png);
+}
+
+#backward{
+	background-image: url(../../img/icons/icons-black/back.png);
 }
 
 #play{
@@ -49,15 +126,22 @@
 	background-image: url(../img/icons/icons-black/pause.png);
 }
 
+#forward{
+	background-image: url(../../img/icons/icons-black/advance.png);
+}
+
 #next{
 	background-image: url(../img/icons/icons-black/next.png);
 }
 
-#before{
-	background-image: url(../img/icons/icons-black/before.png);
-}
-
-
 #repeat{
 	background-image: url(../img/icons/icons-black/repeat.png);
+}
+
+#volume-down{
+	background-image: url(../../img/icons/icons-black/mute.png);
+}
+
+#volume-up{
+	background-image: url(../../img/icons/icons-black/sound.png);
 }

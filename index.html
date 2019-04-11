@@ -12,11 +12,32 @@
       <div class="container-reproductor">
         <div class="img-album"></div>
         <div class="reproductor">
-          <button class="btn" id="random"></button>
-          <button class="btn" id="before"></button>
-          <button class="btn" id="play"></button>
-          <button class="btn" id="next"></button>
-          <button class="btn" id="repeat"></button>
+          <p id="song-title" class="song-title">
+            Aquí va a ir el nombre de la canción
+          </p>
+          <input type="range" id="song-slider" class="song-slider" min="0" step="1" onchange="seekSong()"/>
+          <div class="time">
+            <div id="current-time" class="current-time">00:00</div>
+            <div id="duration" class="duration">00:00</div>
+          </div>
+
+          <div class="controls">
+            <button class="btn" id="random" onclick="random();"></button>
+            <button class="btn" id="before" onclick="previous();"></button>
+            <button class="btn" id="backward" onclick="backward();"></button>
+            <button class="btn" id="play" onclick="playOrPauseSong();"></button>
+            <button class="btn" id="forward" onclick="forward();"></button>
+            <button class="btn" id="next" onclick="next();"></button>
+            <button class="btn" id="repeat" onclick="repeat();"></button>
+          </div>
+
+          <p class="next-song" id="next-song"><b>Next Song:</b> siguiente canción aquí...</p>
+          <div class="volume-controls">
+              <button class="btn" id="volume-down" onclick=""></button>
+              <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" onchange="adjustVolume()" >
+              <button class="btn" id="volume-up" onclick=""></button>
+          </div>
+          
         </div>
       </div>
 
@@ -26,7 +47,6 @@
           <li class="tab active">Songs</li>
           <li class="tab">Import</li>
         </ul>
-
 
         <!--Panels-->
         <div class="panels">
@@ -39,7 +59,7 @@
                 <option value="Album">Album</option>
                 <option value="Started">Started</option>
               </select>
-              <input type="search" id="js-search" name="q" class="search"/>
+              <input type="search" id="js-search" name="q" class="search" />
               <button class="btn search-icon"></button>
               <ul id="js-list"></ul>
             </div>
@@ -53,7 +73,42 @@
           <!--Panel 2-->
           <div class="panel">
             <form action="" class="form">
+              <h2 class="title-import">Import Song</h2>
 
+              <div class="info">
+                <label class="space" for="name">Name</label>
+                <input class="space" type="text" name="name" id="" />
+
+                <label class="space" for="name">Artist</label>
+                <input class="space" type="text" name="artist" id="" />
+
+                <label class="space" for="name">Year</label>
+                <input class="space" type="text" name="year" id="" />
+
+                <label class="space" for="name">Album</label>
+                <input class="space" type="text" name="album" id="" />
+
+                <label class="space" for="name">Started</label>
+              </div>
+
+              <div class="album-img">
+                <h4>Image(Album)</h4>
+                <img src="" alt="" />
+              </div>
+
+              <div class="src">
+                <h4>Sources</h4>
+                <label class="space" for="name">MP3</label>
+                <input class="space" type="text" name="MP3" id="" />
+
+                <label class="space" for="name">WAV</label>
+                <input class="space" type="text" name="WAV" id="" />
+
+                <label class="space" for="name">OGG</label>
+                <input class="space" type="text" name="OGG" id="" />
+              </div>
+              <button type="reset">Cancel</button>
+              <button type="submit">Save</button>
             </form>
           </div>
         </div>
@@ -62,6 +117,7 @@
       <div class="modal"></div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/player.js"></script>
     <script src="js/tabs.js"></script>
   </body>
 </html>
